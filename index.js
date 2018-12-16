@@ -1,9 +1,9 @@
-const moment = require('moment');
-const NOW=moment();
-console.log(NOW);
+'use strict';
+const express = require('express');
+const app = express();
+app.use(express.static('./views'));
+app.listen(8001, ()=> {
+    console.log('Express Server 01');
+});
 
-const http = require('http');
-http.createServer(function (req, res){
-    res.writeHead(200,{'Content-Type':'text/plain'});
-    res.end('OGIHARA\n'+moment());
-}).listen(8000,'127.0.0.1');
+
